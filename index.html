@@ -35,7 +35,7 @@
                     <div class="text-content">
                         <h1>Дмитрий Волченко</h1>
                         <p>Верстка сайтов любой сложности</p>
-                        <button>Связаться со мной</button>
+                        <button class="main__button">Связаться со мной</button>
                     </div>
                     <!-- Изображение -->
                     <img src="./image/phot.png" width="239px" height="339px" alt="Дмитрий Волченко" class="main-photo">
@@ -104,33 +104,38 @@
             </section>
             <!-- Мои работы -->
             <section class="works">
-                <h2>Мои работы
-                </h2>
-                <ul class="work">
-                    <li>Все</li>
-                    <li>Разработка</li>
-                    <li>Дизайн</li>
-                </ul>
-                <div class="galerry">
-                    <img src="" alt="1">
-                    <img src="" alt="2">
-                    <img src="" alt="3">
+                <div class="main-wrapper">
+                    <h2>Мои работы
+                    </h2>
+                    <ul class="work">
+                        <li class="active">Все</li>
+                        <li>Разработка</li>
+                        <li>Дизайн</li>
+                    </ul>
+                    <div class="galerry">
+                        <img src="./image/image1.png" alt="1">
+                        <img src="./image/magazine-3ver.png" alt="2">
+                        <img src="./image/Portfolio.png" alt="3">
+                </div>
                 </div>
             </section>
             <!-- Контакты -->
             <section class="contacts">
-                <div class="form">
-                    <form action="">
-                        <input type="text" placeholder="Укажите ваш e-mail">
+                <h2>Давайте всегда оставаться на связи</h2>
+                <div class="main-wrapper flex">
+                    <form action="" autocomplete="off">
+                        <legend>Оставьте Вашу заявку</legend>
+                        <input type="text" placeholder="Укажите ваше имя и фамилию" required>
+                        <input type="text" placeholder="Укажите ваш e-mail" autocomplete="off" required>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <button type="submit">Отправить</button>
+                        <button type="submit" class="main__button">Отправить</button>
                     </form>
-                </div>
                 <div class="contact">
                     <p>Почта: Sverxsro4nik@gmail.com <br>
                     Вконтакте:                       <br>
                     Инстаграмм:                      <br>
                 Телеграмм:</p>
+                </div>
                 </div>
             </section>
         </main>

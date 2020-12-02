@@ -96,7 +96,7 @@ h2{
     font-weight: normal;
 }
 /* Стили для кнопки на первом экране */
-.text-content button {
+.main__button {
     background-color: #CC4646;
     padding: 16px 47px;
     outline: none;
@@ -266,7 +266,62 @@ progress::-webkit-progress-bar{
 /* Секция с выполненными работами */
 .works{
     background-color: #302424;
+    padding: 70px 0;
 }
+.works h2 {
+    color: var(--main-color);
+}
+.work{
+    list-style: none;
+    display: flex;
+    color: var(--main-color);
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 50px;
+}
+.active{
+    color: #FE9E0E;
+    border-bottom: 1px solid #FE9E0E;
+}
+.galerry{
+    display: flex;
+    gap: 20px;
+}
+.galerry img{
+    align-self: start;
+}
+/* Форма обратоной связи */
 .contacts{
-    background-color: rgba(199, 186, 186, .8);
+    padding: 70px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 40px;
+    width: 530px;
+}
+legend{
+    text-align: center;
+}
+input[type="text"], textarea{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c9a8a8;
+}
+input[type="text"]:focus, textarea:focus{
+    outline: none;
+    border: 2px solid #CC4646;
+    padding: 13px;
+}
+input[type="text"]::placeholder{
+    color: #302424;
+    opacity: 0.7;
+}
+form .main__button{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
 }
