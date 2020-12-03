@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sverxsro4nik/Portfolio.git"
+  },
+  "author": "Sverxsro4nik@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sverxsro4nik/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Sverxsro4nik/Portfolio#readme"
+}
