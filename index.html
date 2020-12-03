@@ -4,6 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Дмитрий Волченко</title>
+    <style>
+        @font-face {
+    font-family: "PTSansCaption";
+      src: url("./fonts/PTSansCaption-Regular.ttf");
+}
+/* Блок для переменных */
+:root {
+    --main-color: #fff;
+}
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* подключение шрифта в документ */
+body{
+    font-family: PTSansCaption;
+}
+/* удаление панели скролла */
+body::-webkit-scrollbar{
+    width: 0;
+}
+/* Главная обертка по ширине */
+.main-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+/* контейнер для флекс элементов */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+/* общие стили для заголовков второго уровня */
+h2{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* Стили для шапки сайта */
+.first-screen{
+    background-image: url('./image/bg.webp');
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Шапка сайта */
+.header{
+    background-color: rgb(80%, 27%, 27%, .75);;
+}
+/* Логотип */
+.logo, .text-content{
+    margin-left: 50px;
+}
+/* Напигационная панель */
+.nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);
+    font-size: 20px;
+}
+/* Отступы для элементов списка */
+.nav li:not(:first-child) {
+    margin-left: 30px;
+}
+/* поведение при наведении и активности пункта */
+.nav li:active, .nav li:hover {
+    cursor: pointer;
+    color: #FE9E0E;
+    border-bottom: 1px solid #FE9E0E;
+}
+/* Стили для первого экрана */
+.first-content, .citate{
+    background-color: rgb(23%, 21%, 21%, .5);
+    color: var(--main-color);
+}
+/* Текстовая часть первого экрана */
+.text-content{
+    display: flex;
+    flex-direction: column;
+}
+/* Заголовок первого экрана */
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-top: 70px;
+}
+/* Стили для параграфа первого экрана */
+.text-content p {
+    margin-top: 40px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: normal;
+}
+/* Стили для кнопки на первом экране */
+.main__button {
+    background-color: #CC4646;
+    padding: 16px 47px;
+    outline: none;
+    border: none;
+    margin-bottom: 95px;
+    margin-top: 60px;
+    align-self: center;
+    color: var(--main-color);
+}
+/* Стили для фотографии */
+.main-photo{
+    display: inline-block;
+    margin-right: 100px;
+}
+/* Стили для блока обо мне */
+.about-me{
+    background-color: var(--main-color);
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -121,32 +241,30 @@
             </section>
             <!-- Контакты -->
             <section class="contacts">
-                <h2>Давайте всегда оставаться на связи</h2>
-                <div class="main-wrapper flex">
+                <h2>Оставить заявку</h2>
+                <div class="main-wrapper">
                     <form action="" autocomplete="off">
-                        <legend>Оставьте Вашу заявку</legend>
                         <input type="text" placeholder="Укажите ваше имя и фамилию" required>
                         <input type="text" placeholder="Укажите ваш e-mail" autocomplete="off" required>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                         <button type="submit" class="main__button">Отправить</button>
                     </form>
-                <div class="contact">
-                    <p>Почта: Sverxsro4nik@gmail.com <br>
-                    Вконтакте:                       <br>
-                    Инстаграмм:                      <br>
-                Телеграмм:</p>
-                </div>
                 </div>
             </section>
         </main>
         <!-- Подвал -->
-        <footer>
-            <div class="footer-logo"></div>
-            <div class="sochial">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+        <footer class="footer">
+            <div class="main-wrapper flex">
+                <div class="footer-logo">
+                    <img src="./image/Sverxsro4nik.svg" alt="Sverxsro4nik">
+                </div>
+                <div class="sochial">
+                    <a href="#" class="vkontakte"></a>
+                    <a href="#" class="twiter"></a>
+                    <a href="#" class="instagram"></a>
+                    <a href="#" class="telegram"></a>
+                </div>
+                <p class="email">Sverxsro4nik@gmail.com</p>
             </div>
         </footer>
 </body>
