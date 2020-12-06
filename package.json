@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Sverxsro4nik/Portfolio/issues"
   },
-  "homepage": "https://github.com/Sverxsro4nik/Portfolio#readme"
+  "homepage": "https://github.com/Sverxsro4nik/Portfolio#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
