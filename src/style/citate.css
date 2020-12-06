@@ -1,0 +1,46 @@
+/* Блок с цитатой */
+.citate{
+    padding: 70px 0;
+    background-image: url('./image/bg_small.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(23%, 21%, 21%, .5);
+    background-blend-mode: multiply;
+}
+/* Стилизация цитаты */
+.lao{
+    text-align: right;
+    padding: 0 50px;
+    font-style: italic;
+    font-weight: 200;
+    position: relative;
+}
+
+/* Общие стили для псевдоэлементов, вставляем кавычки */
+.lao::before, .lao::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+/* Уникальные стили для кавычек в цитате */
+.lao::before{
+    background-image: url('./image/icon/left.svg');
+    top: -30px;
+    left: 0px;
+}
+
+.lao::after{
+    background-image: url('./image/icon/right.svg');
+    background-repeat: no-repeat;
+    bottom: 60px;
+    right: 0px;
+}
+/* Стилизация Выразившего данную цитату */
+.lao p {
+    margin-top: 60px;
+    margin-right: -40px;
+    font-size: 48px;
+}

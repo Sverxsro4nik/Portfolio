@@ -1,0 +1,31 @@
+/* Секция с выполненными работами */
+.works{
+    background-color: #302424;
+    padding: 70px 0;
+}
+/* Стили для заголвка секции работ */
+.works h2 {
+    color: var(--main-color);
+}
+/* Стилизация списка с выбором работ */
+.work{
+    list-style: none;
+    display: flex;
+    color: var(--main-color);
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 50px;
+}
+/* активный элемент списка */
+.active{
+    color: #FE9E0E;
+    border-bottom: 1px solid #FE9E0E;
+}
+/* Стили для галереи */
+.galerry{
+    display: flex;
+    gap: 20px;
+}
+.galerry img{
+    align-self: start;
+}

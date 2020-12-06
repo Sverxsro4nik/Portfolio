@@ -1,0 +1,54 @@
+/* Блок с достоинствами */
+.pluses{
+    background-color: #AF9F9F;
+    padding-top: 90px;
+    padding-bottom: 75px;
+}
+/* Специфические стили для заголовка второго уровня */
+.pluses h2{
+    color: var(--main-color);
+}
+/* Блочки с плюсами */
+.pluse{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 30px;
+}
+/* Стили для подпунктов в плюсах */
+.element{
+    padding-top: 40px;
+    background-color: var(--main-color);
+    position: relative;
+    flex: 1 1 300px;
+    min-width: 300px;
+}
+/* Добавление иконок в подпункты  общие требования*/
+.adaptive::before, .semantic::before, .fast::before{
+    content: '';
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    width: 115px;
+    height: 100px;
+}
+/* Иконки в подпунктах, отдельно для каждого пункта */
+.adaptive::before{
+    background-image: url('./image/icon/tablet.svg');
+}
+.semantic::before{
+    background-image: url('./image/icon/html5.svg');
+}
+.fast::before{
+    background-image: url('./image/icon/lighthouse.svg');
+}
+/* Уникальные стили для элементов которые используются в блоке плюсов */
+.element h3 {
+    text-align: center;
+}
+.element p {
+    margin-top: 156px;
+    background-color: #C4C4C4;
+    padding: 25px 10px;
+}

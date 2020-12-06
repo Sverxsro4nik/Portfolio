@@ -1,0 +1,37 @@
+/* Форма обратоной связи */
+.contacts{
+    padding: 70px 0;
+    justify-content: start;
+}
+/* Изменение отображения формы и полей для ввода */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
+    width: 530px;
+}
+legend{
+    text-align: center;
+}
+input[type="text"], textarea{
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c9a8a8;
+}
+input[type="text"]:focus, textarea:focus{
+    outline: none;
+    border: 2px solid #CC4646;
+    padding: 13px;
+}
+input[type="text"]::placeholder{
+    color: #302424;
+    opacity: 0.7;
+}
+form .main__button{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -9,7 +9,7 @@
 .pluses h2{
     color: var(--main-color);
 }
-/* Блочки с плючами */
+/* Блочки с плюсами */
 .pluse{
     list-style: none;
     display: flex;
