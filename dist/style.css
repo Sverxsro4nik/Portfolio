@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "PTSansCaption";
+  src: url("dist/fonts/PTSansCaption-Regular.woff");
+}
 /* Блок с достоинствами */
 
 .pluses {
