@@ -23,18 +23,36 @@ function styles() {
       .pipe(concatCss("style.css"))
       .pipe(gulp.dest('dist/'));
 };
-(async () => {
-	await imagemin(['./src/image/*.png'], {
-		destination: 'dist/image',
-		plugins: [
-            imageminPngquant(),
-            imageminJpegtran(),
-            imageminSvgo()
-		]
-	});
 
-	console.log('Images optimized!');
-})();
 
+function images() {
+    return gulp.src('src/image/*')
+		.pipe(imagemin({
+            destination: 'dist/images',
+            plugins: [
+                imageminSvgo(),
+                imageminJpegtran(),
+                imageminPngquant(),
+
+            ]
+        }))
+        .pipe(gulp.dest('dist/images'))
+}
+
+function imagesIcon() {
+    return gulp.src('src/image/icon/*')
+		.pipe(imagemin({
+            destination: 'dist/images',
+            plugins: [
+                imageminSvgo(),
+                imageminJpegtran(),
+                imageminPngquant(),
+
+            ]
+        }))
+        .pipe(gulp.dest('dist/images/icon'))
+}
 
 gulp.task('styles', styles);
+gulp.task('images', images);
+gulp.task('imagesIcon', imagesIcon);
