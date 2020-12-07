@@ -3,13 +3,13 @@ var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 const imagemin = require('gulp-imagemin');
 const gulpClean = require('gulp-clean');
-const cleanCSS = require('gulp-clean-css');
+const gulpFont= require('gulp-fonter');
 const imageminJpegtran = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
 
 
-const cssFiles = ['./src/style/pluses.css',
+const cssFiles = ['./src/style/font.css','./src/style/pluses.css',
                     './src/style/citate.css', 
                     './src/style/skills.css',
                 './src/style/works.css',
@@ -22,47 +22,49 @@ const jsFiles = [];
 function styles() {
     return gulp.src(cssFiles)
       .pipe(concatCss("style.css"))
-      .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(gulp.dest('dist/'));
 };
-
+// Обработка шрифтов
+function fonts(){
+    return gulp
+      .src('./src/fonts/*')
+      .pipe(gulpFont({
+          subset: [66,67,68, 69, 70, 71],
+          formats: ['woff']
+        }))
+      .pipe(gulp.dest('./dist/fonts/*'));
+}
 // Обработка изображений
 function images() {
-    return gulp.src('src/image/*')
+    return gulp.src('./src/image/*')
 		.pipe(imagemin({
-            destination: 'dist/images',
+            destination: './dist/images',
             plugins: [
                 imageminSvgo(),
                 imageminJpegtran(),
                 imageminPngquant(),
-
-            ]
+    ]
         }))
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('./dist/images'))
 }
 
 function imagesIcon() {
-    return gulp.src('src/image/icon/*')
+    return gulp.src('./src/image/icon/*')
 		.pipe(imagemin({
-            destination: 'dist/images',
+            destination: './dist/images',
             plugins: [
                 imageminSvgo(),
                 imageminJpegtran(),
                 imageminPngquant(),
-
             ]
         }))
-        .pipe(gulp.dest('dist/images/icon'))
+        .pipe(gulp.dest('./dist/images/icon'))
 }
 // Очистка папки dist
 function cleanDist() {
-    return gulp.src('./dist', {read: false})
-    .pipe(gulpClean());
+    return gulp.src('./dist/style.css', {read: false})
+    .pipe();
 }
-
-gulp.task('styles', styles);
-gulp.task('images', images);
-gulp.task('imagesIcon', imagesIcon);
+gulp.task('static', gulp.parallel(fonts, gulp.series(images, imagesIcon)));
 gulp.task('clean', cleanDist);
-gulp.task('createFiles', gulp.parallel(styles, gulp.parallel(images, imagesIcon)));
-gulp.task('build', gulp.series(cleanDist, 'createFiles'));
+gulp.task('styles', styles);
