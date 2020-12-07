@@ -35,13 +35,13 @@
 }
 /* Иконки в подпунктах, отдельно для каждого пункта */
 .adaptive::before{
-    background-image: url('./image/icon/tablet.svg');
+    background-image: url('./images/icon/tablet.svg');
 }
 .semantic::before{
-    background-image: url('./image/icon/html5.svg');
+    background-image: url('./images/icon/html5.svg');
 }
 .fast::before{
-    background-image: url('./image/icon/lighthouse.svg');
+    background-image: url('./images/icon/lighthouse.svg');
 }
 /* Уникальные стили для элементов которые используются в блоке плюсов */
 .element h3 {

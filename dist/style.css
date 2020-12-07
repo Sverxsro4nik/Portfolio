@@ -48,15 +48,15 @@
 /* Иконки в подпунктах, отдельно для каждого пункта */
 
 .adaptive::before {
-  background-image: url("image/icon/tablet.svg");
+  background-image: url("images/icon/tablet.svg");
 }
 
 .semantic::before {
-  background-image: url("image/icon/html5.svg");
+  background-image: url("images/icon/html5.svg");
 }
 
 .fast::before {
-  background-image: url("image/icon/lighthouse.svg");
+  background-image: url("images/icon/lighthouse.svg");
 }
 
 /* Уникальные стили для элементов которые используются в блоке плюсов */
@@ -74,7 +74,7 @@
 
 .citate {
   padding: 70px 0;
-  background-image: url("image/bg_small.webp");
+  background-image: url("images/bg_small.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -106,13 +106,13 @@
 /* Уникальные стили для кавычек в цитате */
 
 .lao::before {
-  background-image: url("image/icon/left.svg");
+  background-image: url("images/icon/left.svg");
   top: -30px;
   left: 0px;
 }
 
 .lao::after {
-  background-image: url("image/icon/right.svg");
+  background-image: url("images/icon/right.svg");
   background-repeat: no-repeat;
   bottom: 60px;
   right: 0px;
@@ -303,18 +303,18 @@ form .main__button {
 }
 
 .vkontakte {
-  background-image: url("image/icon/vkontakte.svg");
+  background-image: url("images/icon/vkontakte.svg");
   background-position: center center;
 }
 
 .twiter {
-  background-image: url("image/icon/twitter.svg");
+  background-image: url("images/icon/twitter.svg");
 }
 
 .telegram {
-  background-image: url("image/icon/telegram.svg");
+  background-image: url("images/icon/telegram.svg");
 }
 
 .instagram {
-  background-image: url("image/icon/instagram.svg");
+  background-image: url("images/icon/instagram.svg");
 }

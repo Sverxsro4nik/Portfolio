@@ -2,10 +2,10 @@ const { task } = require('gulp');
 var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 const imagemin = require('gulp-imagemin');
+const gulpClean = require('gulp-clean');
 const imageminJpegtran = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
-// const imageminGifsicle = require('imagemin-gifsicle');
 
 
 const cssFiles = ['./src/style/pluses.css',
@@ -24,7 +24,7 @@ function styles() {
       .pipe(gulp.dest('dist/'));
 };
 
-
+// Обработка изображений
 function images() {
     return gulp.src('src/image/*')
 		.pipe(imagemin({
@@ -52,7 +52,15 @@ function imagesIcon() {
         }))
         .pipe(gulp.dest('dist/images/icon'))
 }
+// Очистка папки dist
+function cleanDist() {
+    return gulp.src('./dist', {read: false})
+    .pipe(gulpClean());
+}
 
 gulp.task('styles', styles);
 gulp.task('images', images);
 gulp.task('imagesIcon', imagesIcon);
+gulp.task('clean', cleanDist);
+gulp.task('createFiles', gulp.parallel(styles, gulp.parallel(images, imagesIcon)));
+gulp.task('build', gulp.series(cleanDist, 'createFiles'));

@@ -23,15 +23,15 @@
     background-repeat: no-repeat;
 }
 .vkontakte{
-    background-image: url('./image/icon/vkontakte.svg');
+    background-image: url('./images/icon/vkontakte.svg');
     background-position: center center;
 }
 .twiter{
-    background-image: url('./image/icon/twitter.svg');
+    background-image: url('./images/icon/twitter.svg');
 }
 .telegram{
-    background-image: url('./image/icon/telegram.svg');
+    background-image: url('./images/icon/telegram.svg');
 }
 .instagram{
-    background-image: url('./image/icon/instagram.svg');
+    background-image: url('./images/icon/instagram.svg');
 }

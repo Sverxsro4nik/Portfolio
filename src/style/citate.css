@@ -1,7 +1,7 @@
 /* Блок с цитатой */
 .citate{
     padding: 70px 0;
-    background-image: url('./image/bg_small.webp');
+    background-image: url('./images/bg_small.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -27,13 +27,13 @@
 }
 /* Уникальные стили для кавычек в цитате */
 .lao::before{
-    background-image: url('./image/icon/left.svg');
+    background-image: url('./images/icon/left.svg');
     top: -30px;
     left: 0px;
 }
 
 .lao::after{
-    background-image: url('./image/icon/right.svg');
+    background-image: url('./images/icon/right.svg');
     background-repeat: no-repeat;
     bottom: 60px;
     right: 0px;
