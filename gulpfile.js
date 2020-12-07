@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
 const imagemin = require('gulp-imagemin');
 const gulpClean = require('gulp-clean');
+const cleanCSS = require('gulp-clean-css');
 const imageminJpegtran = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
@@ -21,6 +22,7 @@ const jsFiles = [];
 function styles() {
     return gulp.src(cssFiles)
       .pipe(concatCss("style.css"))
+      .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(gulp.dest('dist/'));
 };
 
