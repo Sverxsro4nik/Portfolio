@@ -1,0 +1,320 @@
+/* Блок с достоинствами */
+
+.pluses {
+  background-color: #AF9F9F;
+  padding-top: 90px;
+  padding-bottom: 75px;
+}
+
+/* Специфические стили для заголовка второго уровня */
+
+.pluses h2 {
+  color: var(--main-color);
+}
+
+/* Блочки с плюсами */
+
+.pluse {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  gap: 30px;
+}
+
+/* Стили для подпунктов в плюсах */
+
+.element {
+  padding-top: 40px;
+  background-color: var(--main-color);
+  position: relative;
+  flex: 1 1 300px;
+  min-width: 300px;
+}
+
+/* Добавление иконок в подпункты  общие требования*/
+
+.adaptive::before,
+.semantic::before,
+.fast::before {
+  content: '';
+  position: absolute;
+  top: 85px;
+  left: 120px;
+  width: 115px;
+  height: 100px;
+}
+
+/* Иконки в подпунктах, отдельно для каждого пункта */
+
+.adaptive::before {
+  background-image: url("images/icon/tablet.svg");
+}
+
+.semantic::before {
+  background-image: url("images/icon/html5.svg");
+}
+
+.fast::before {
+  background-image: url("images/icon/lighthouse.svg");
+}
+
+/* Уникальные стили для элементов которые используются в блоке плюсов */
+
+.element h3 {
+  text-align: center;
+}
+
+.element p {
+  margin-top: 156px;
+  background-color: #C4C4C4;
+  padding: 25px 10px;
+}
+/* Блок с цитатой */
+
+.citate {
+  padding: 70px 0;
+  background-image: url("images/bg_small.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgb(23%, 21%, 21%, .5);
+  background-blend-mode: multiply;
+}
+
+/* Стилизация цитаты */
+
+.lao {
+  text-align: right;
+  padding: 0 50px;
+  font-style: italic;
+  font-weight: 200;
+  position: relative;
+}
+
+/* Общие стили для псевдоэлементов, вставляем кавычки */
+
+.lao::before,
+.lao::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+/* Уникальные стили для кавычек в цитате */
+
+.lao::before {
+  background-image: url("images/icon/left.svg");
+  top: -30px;
+  left: 0px;
+}
+
+.lao::after {
+  background-image: url("images/icon/right.svg");
+  background-repeat: no-repeat;
+  bottom: 60px;
+  right: 0px;
+}
+
+/* Стилизация Выразившего данную цитату */
+
+.lao p {
+  margin-top: 60px;
+  margin-right: -40px;
+  font-size: 48px;
+}
+/* панель с навыками */
+
+.skills {
+  background-color: var(--main-color);
+  padding: 70px 0;
+}
+
+.panels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.left-panel,
+.right-panel {
+  width: 35%;
+}
+
+.left-panel h3,
+.right-panel h3 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.right-panel h3 {
+  margin-top: -20px;
+}
+
+.left-panel p,
+.right-panel p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.text-part {
+  display: inline-block;
+  align-self: start;
+}
+
+.value-part {
+  width: 250px;
+  border-radius: 0px;
+}
+
+/* Цвет значения в прогрессе */
+
+progress::-webkit-progress-value {
+  background-color: #CC4646;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Цвет прогресс-бара */
+
+progress::-webkit-progress-bar {
+  background-color: #C4C4C4;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Секция с выполненными работами */
+
+.works {
+  background-color: #302424;
+  padding: 70px 0;
+}
+
+/* Стили для заголвка секции работ */
+
+.works h2 {
+  color: var(--main-color);
+}
+
+/* Стилизация списка с выбором работ */
+
+.work {
+  list-style: none;
+  display: flex;
+  color: var(--main-color);
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+/* активный элемент списка */
+
+.active {
+  color: #FE9E0E;
+  border-bottom: 1px solid #FE9E0E;
+}
+
+/* Стили для галереи */
+
+.galerry {
+  display: flex;
+  gap: 20px;
+}
+
+.galerry img {
+  align-self: start;
+}
+/* Форма обратоной связи */
+
+.contacts {
+  padding: 70px 0;
+  justify-content: start;
+}
+
+/* Изменение отображения формы и полей для ввода */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 auto;
+  width: 530px;
+}
+
+legend {
+  text-align: center;
+}
+
+input[type="text"],
+textarea {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #c9a8a8;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #CC4646;
+  padding: 13px;
+}
+
+input[type="text"]::placeholder {
+  color: #302424;
+  opacity: 0.7;
+}
+
+form .main__button {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Подвал сайта */
+
+.footer {
+  background-color: #332D2D;
+  color: var(--main-color);
+}
+
+.footer .flex {
+  padding: 20px 0;
+}
+
+.footer-logo {
+  margin-top: 5px;
+}
+
+.sochial {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin-left: 50px;
+}
+
+.sochial a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.vkontakte {
+  background-image: url("images/icon/vkontakte.svg");
+  background-position: center center;
+}
+
+.twiter {
+  background-image: url("images/icon/twitter.svg");
+}
+
+.telegram {
+  background-image: url("images/icon/telegram.svg");
+}
+
+.instagram {
+  background-image: url("images/icon/instagram.svg");
+}

@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "My portfolio",
-  "main": "index.html",
+  "main": "gulp.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,13 @@
   "homepage": "https://github.com/Sverxsro4nik/Portfolio#readme",
   "dependencies": {
     "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.4.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-imagemin": "^7.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0"
   }
 }

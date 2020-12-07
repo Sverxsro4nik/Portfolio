@@ -1,0 +1,45 @@
+
+/* панель с навыками */
+.skills{
+    background-color: var(--main-color);
+    padding: 70px 0;
+}
+.panels{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.left-panel, .right-panel{
+    width: 35%;
+}
+.left-panel h3, .right-panel h3{
+    text-align: center;
+    margin: 40px 0;
+}
+.right-panel h3{
+    margin-top: -20px;
+}
+.left-panel p, .right-panel p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.text-part{
+    display: inline-block;
+    align-self: start;
+}
+.value-part{
+    width: 250px;
+    border-radius: 0px;
+}
+/* Цвет значения в прогрессе */
+progress::-webkit-progress-value{
+    background-color: #CC4646;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Цвет прогресс-бара */
+progress::-webkit-progress-bar{
+    background-color: #C4C4C4;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
