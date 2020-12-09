@@ -47,10 +47,15 @@ h2{
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 107px;
 }
 /* Шапка сайта */
 .header{
-    background-color: rgb(80%, 27%, 27%, .75);;
+    background-color: rgb(80%, 27%, 27%, .5);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
 }
 /* Логотип */
 .logo, .text-content{
@@ -68,8 +73,12 @@ h2{
 .nav li:not(:first-child) {
     margin-left: 30px;
 }
+.nav li a {
+    text-decoration: none;
+    color: var(--main-color);
+}
 /* поведение при наведении и активности пункта */
-.nav li:active, .nav li:hover {
+.nav li a:active, .nav li a:hover {
     cursor: pointer;
     color: #FE9E0E;
     border-bottom: 1px solid #FE9E0E;
@@ -123,29 +132,29 @@ h2{
     <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body>
+    <!-- Шапка сайта-->
+    <header class="header">
+        <!-- Логотип -->
+        <div class="main-wrapper flex">
+            <div class="logo">
+                <img src="./dist/images/Sverxsro4nik.svg" alt="Sverxsro4nik">
+            </div>
+            <!-- Главная навигация -->
+            <nav>
+                <ul class="nav">
+                    <li><a href="#firstScreen">Главная</a></li>
+                    <li><a href="#aboutMe">Обо мне</a></li>
+                    <li><a href="#skill">Навыки</a></li>
+                    <li><a href="#work">Портфолио</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
         <!-- Первый экран -->
         <div class="first-screen">
-            <!-- Шапка сайта -->
-            <header class="header">
-                <!-- Логотип -->
-                <div class="main-wrapper flex">
-                    <div class="logo">
-                        <img src="./dist/images/Sverxsro4nik.svg" alt="Sverxsro4nik">
-                    </div>
-                    <!-- Главная навигация -->
-                    <nav>
-                        <ul class="nav">
-                            <li>Главная</li>
-                            <li>Обо мне</li>
-                            <li>Навыки</li>
-                            <li>Портфолио</li>
-                            <li>Контакты</li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
             <!-- Контентная часть первого экрана-->
-            <div class="first-content">
+            <div class="first-content" id="firstScreen">
                 <!-- Текстовая часть первого экрана -->
                 <div class="main-wrapper flex">
                     <div class="text-content">
@@ -160,7 +169,7 @@ h2{
         </div>
         <main>
             <!-- Блок обо мне -->
-            <section class="about-me">
+            <section class="about-me" id="aboutMe">
                 <div class="main-wrapper">
                     <h2>Я создаю прекрасные адаптивные и современные сайты</h2>
                 <p>В настоящее время интернет занял внушительную часть нашей жизни, а значит сайты должны быть созданы не только визуально привлекательными,
@@ -200,7 +209,7 @@ h2{
                 </blockquote>
             </section>
             <!-- Навыки -->
-            <section class="skills">
+            <section class="skills" id="skill">
                 <div class="main-wrapper">
                     <h2>Мои навыки</h2>
                     <div class="panels">
@@ -219,7 +228,7 @@ h2{
                 </div>
             </section>
             <!-- Мои работы -->
-            <section class="works">
+            <section class="works" id="work">
                 <div class="main-wrapper">
                     <h2>Мои работы
                     </h2>
@@ -236,7 +245,7 @@ h2{
                 </div>
             </section>
             <!-- Контакты -->
-            <section class="contacts">
+            <section class="contacts" id="contact">
                 <h2>Оставить заявку</h2>
                 <div class="main-wrapper">
                     <form action="" autocomplete="off">
