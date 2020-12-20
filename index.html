@@ -55,7 +55,7 @@ h2{
     background-color: rgba(116, 12, 12, 0.85);
     position: fixed;
     z-index: 1000;
-    width: 100%;
+    width: 100vw;
 
 }
 /* Логотип */
@@ -85,15 +85,24 @@ h2{
     border-bottom: 1px solid #FE9E0E;
 }
 /* Выпадашка */
-.burger{
-    display: none;
-}
 .line{
+    display: block;
     width: 40px;
     border: 1px solid white;
 }
 .line:not(:first-child){
     margin-top: 10px;
+}
+.burger{
+    display: block;
+    margin-top: -5px;
+    position: relative;
+}
+.toggle{
+    display: none;
+}
+.burger label{
+    display: none;
 }
 /* Стили для первого экрана */
 .first-content, .citate{
@@ -141,12 +150,50 @@ h2{
     padding-bottom: 70px;
 }
 @media (max-width:768px) and (min-width:350px) {
-    .burger{
-display: block;
+    .logo{
+        margin-left: 0;
+    }
+    .burger label{
+    display: block;
+    margin-top: -5px;
     }
     .nav{
         display: none;
     }
+    .toggle{
+    display: none;
+}
+.nav{
+    display: none;
+}
+.toggle:checked + label + .nav{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    margin-top: 20px;
+    right: 20px;
+}
+.toggle:checked + label + .nav li:not(:first-child){
+    margin-left: 0;
+}
+.toggle:checked + label .line:first-child{
+    position: relative;
+    transform: rotate(45deg);
+    top: 10px;
+}
+.toggle:checked + label .line:nth-child(2){
+    opacity: 0;
+}
+.toggle:checked + label .line:nth-child(3){
+    position: relative;
+    transform: rotate(-45deg);
+    top: -14px;
+    left: 2px;
+}
 }
     </style>
     <link rel="stylesheet" href="./dist/style.css">
@@ -161,19 +208,22 @@ display: block;
             </div>
             <!-- Главная навигация -->
             <nav>
-                <ul class="nav">
-                    <li><a href="#firstScreen">Главная</a></li>
-                    <li><a href="#aboutMe">Обо мне</a></li>
-                    <li><a href="#skill">Навыки</a></li>
-                    <li><a href="#work">Портфолио</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
+                <div class="burger">
+                    <input type="checkbox" class="toggle" id="toggle">
+                    <label for="toggle" class="burger__menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </label>
+                    <ul class="nav">
+                        <li><a href="#firstScreen">Главная</a></li>
+                        <li><a href="#aboutMe">Обо мне</a></li>
+                        <li><a href="#skill">Навыки</a></li>
+                        <li><a href="#work">Портфолио</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
             </nav>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
         </div>
     </header>
         <!-- Первый экран -->
