@@ -1,19 +1,13 @@
 const navLinks = document.querySelectorAll('nav li a');
 console.log(navLinks);
 const sections = document.querySelectorAll('section');
+console.log(sections);
+document.addEventListener('scroll', () =>{
+    for(let section of sections) {
 
-const view = (arr) => {
-    for(let elem of arr){
-        let elemView = elem.getBoundingClientRect();
-        if(window.pageYOffset  === elemView.offsetTop){
-            console.log('get');
+        if(section.offsetTop < window.pageYOffset && section.id){
+            console.log(true);
         }
     }
-}
-view(sections);
-//const domREct = elem.getBoundingClientRect();
-console.log(sections);
-function pageY(){
-    console.log(window.pageYOffset);
-}
-pageY();
+    // console.log(window.pageYOffset);
+})

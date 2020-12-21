@@ -25,6 +25,7 @@
 .galerry{
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .galerry img{
     align-self: start;

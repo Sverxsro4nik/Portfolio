@@ -1,0 +1,55 @@
+/* Медиа запросы для мобильных устройств */
+@media screen and (max-width: 767px){
+    .text-content{
+        margin-left: 0;
+    }
+    .about-me, .pluses, .citate, .skills, .works, .contacts{
+        padding: 30px 0;
+    }
+    .main-photo{
+        margin-right: 0;
+    }
+    .modile__flex {
+        justify-content: center;
+    }
+    .left-panel, .right-panel{
+        width: 100vw;
+    }
+    .right-panel{
+        margin-top: 20px;
+    }
+    .galerry{
+        justify-content: center;
+    }
+    .work{
+        justify-content: start;
+        gap: 2rem;
+    }
+    .footer .flex{
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 15px;
+    }
+    .sochial{
+        margin-top: 5px;
+        margin-left: 80px;
+        order: 2;
+        justify-content: space-between;
+    }
+    .email{
+        margin-top: 5px;
+    }
+}
+/*Медиа запросы для планшетов*/
+@media screen and (max-width: 959px){
+    .text-content{
+        margin-left: 0;
+    }
+    .main-photo{
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    .text-part{
+        margin-right: 20px;
+    }
+}

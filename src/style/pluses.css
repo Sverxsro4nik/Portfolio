@@ -22,7 +22,7 @@
     background-color: var(--main-color);
     position: relative;
     flex: 1 1 300px;
-    min-width: 350px;
+    min-width: 300px;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 50px 100px max-content;

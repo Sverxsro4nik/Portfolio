@@ -7,8 +7,10 @@
 .panels{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    flex: 1 1 300px;
 }
 .left-panel, .right-panel{
     width: 35%;
