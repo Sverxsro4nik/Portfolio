@@ -9,7 +9,7 @@ form {
     flex-direction: column;
     gap: 30px;
     margin: 0 auto;
-    width: 530px;
+    width: 90%;
 }
 legend{
     text-align: center;

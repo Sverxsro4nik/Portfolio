@@ -34,6 +34,10 @@
   position: relative;
   flex: 1 1 300px;
   min-width: 300px;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 100px max-content;
+  gap: 10px;
 }
 
 /* Добавление иконок в подпункты  общие требования*/
@@ -42,11 +46,10 @@
 .semantic::before,
 .fast::before {
   content: '';
-  position: absolute;
-  top: 85px;
-  left: 120px;
-  width: 115px;
-  height: 100px;
+  width: 110px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  justify-self: center;
 }
 
 /* Иконки в подпунктах, отдельно для каждого пункта */
@@ -67,12 +70,17 @@
 
 .element h3 {
   text-align: center;
+  grid-column: 1/-1;
+  align-self: center;
+  justify-self: center;
 }
 
 .element p {
   margin-top: 156px;
   background-color: #C4C4C4;
   padding: 25px 10px;
+  grid-column: 1/-1;
+  grid-row: 2 /-1;
 }
 /* Блок с цитатой */
 
@@ -139,8 +147,10 @@
 .panels {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
+  flex: 1 1 300px;
 }
 
 .left-panel,
@@ -224,6 +234,7 @@ progress::-webkit-progress-bar {
 .galerry {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .galerry img {
@@ -243,7 +254,7 @@ form {
   flex-direction: column;
   gap: 30px;
   margin: 0 auto;
-  width: 530px;
+  width: 90%;
 }
 
 legend {
@@ -321,4 +332,81 @@ form .main__button {
 
 .instagram {
   background-image: url("images/icon/instagram.svg");
+  fill: white;
+}
+/* Медиа запросы для мобильных устройств */
+
+@media screen and (max-width: 767px) {
+  .text-content {
+    margin-left: 0;
+  }
+
+  .about-me,
+  .pluses,
+  .citate,
+  .skills,
+  .works,
+  .contacts {
+    padding: 30px 0;
+  }
+
+  .main-photo {
+    margin-right: 0;
+  }
+
+  .modile__flex {
+    justify-content: center;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100vw;
+  }
+
+  .right-panel {
+    margin-top: 20px;
+  }
+
+  .galerry {
+    justify-content: center;
+  }
+
+  .work {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .footer .flex {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 15px;
+  }
+
+  .sochial {
+    margin-top: 5px;
+    margin-left: 80px;
+    order: 2;
+    justify-content: space-between;
+  }
+
+  .email {
+    margin-top: 5px;
+  }
+}
+
+/*Медиа запросы для планшетов*/
+
+@media screen and (max-width: 959px) {
+  .text-content {
+    margin-left: 0;
+  }
+
+  .main-photo {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  .text-part {
+    margin-right: 20px;
+  }
 }

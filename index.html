@@ -25,6 +25,7 @@ body::-webkit-scrollbar{
 }
 /* Главная обертка по ширине */
 .main-wrapper {
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -47,10 +48,15 @@ h2{
     background-origin: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 107px;
 }
 /* Шапка сайта */
 .header{
-    background-color: rgb(80%, 27%, 27%, .75);;
+    background-color: rgba(116, 12, 12, 0.85);
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+
 }
 /* Логотип */
 .logo, .text-content{
@@ -68,11 +74,35 @@ h2{
 .nav li:not(:first-child) {
     margin-left: 30px;
 }
+.nav li a {
+    text-decoration: none;
+    color: var(--main-color);
+}
 /* поведение при наведении и активности пункта */
-.nav li:active, .nav li:hover {
+.nav li a:active, .nav li a:hover {
     cursor: pointer;
     color: #FE9E0E;
     border-bottom: 1px solid #FE9E0E;
+}
+/* Выпадашка */
+.line{
+    display: block;
+    width: 40px;
+    border: 1px solid white;
+}
+.line:not(:first-child){
+    margin-top: 10px;
+}
+.burger{
+    display: block;
+    margin-top: -5px;
+    position: relative;
+}
+.toggle{
+    display: none;
+}
+.burger label{
+    display: none;
 }
 /* Стили для первого экрана */
 .first-content, .citate{
@@ -99,7 +129,7 @@ h2{
 }
 /* Стили для кнопки на первом экране */
 .main__button {
-    background-color: #CC4646;
+    background-color: rgba(116, 12, 12, 1);
     padding: 16px 47px;
     outline: none;
     border: none;
@@ -119,35 +149,93 @@ h2{
     padding-top: 90px;
     padding-bottom: 70px;
 }
+@media (max-width:768px) and (min-width:350px) {
+    .logo{
+        margin-left: 0;
+    }
+    .burger label{
+    display: block;
+    margin-top: -5px;
+    }
+    .nav{
+        display: none;
+    }
+    .toggle{
+    display: none;
+}
+.nav{
+    display: none;
+}
+.burger >{
+    background-color: #fff;
+}
+}
+.toggle:checked + label + .nav{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+    margin-top: 20px;
+    right: 20px;
+}
+.toggle:checked + label + .nav li:not(:first-child){
+    margin-left: 0;
+}
+.toggle:checked + label .line:first-child{
+    position: relative;
+    transform: rotate(45deg);
+    top: 10px;
+}
+.toggle:checked + label .line:nth-child(2){
+    opacity: 0;
+}
+.toggle:checked + label .line:nth-child(3){
+    position: relative;
+    transform: rotate(-45deg);
+    top: -14px;
+    left: 2px;
+}
+}
     </style>
     <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body>
+    <!-- Шапка сайта-->
+    <header class="header">
+        <!-- Логотип -->
+        <div class="main-wrapper flex">
+            <div class="logo">
+                <img src="./dist/images/Sverxsro4nik.svg" alt="Sverxsro4nik">
+            </div>
+            <!-- Главная навигация -->
+            <nav>
+                <div class="burger">
+                    <input type="checkbox" class="toggle" id="toggle">
+                    <label for="toggle" class="burger__menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </label>
+                    <ul class="nav">
+                        <li><a href="#firstScreen">Главная</a></li>
+                        <li><a href="#aboutMe">Обо мне</a></li>
+                        <li><a href="#skill">Навыки</a></li>
+                        <li><a href="#work">Портфолио</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
         <!-- Первый экран -->
         <div class="first-screen">
-            <!-- Шапка сайта -->
-            <header class="header">
-                <!-- Логотип -->
-                <div class="main-wrapper flex">
-                    <div class="logo">
-                        <img src="./dist/images/Sverxsro4nik.svg" alt="Sverxsro4nik">
-                    </div>
-                    <!-- Главная навигация -->
-                    <nav>
-                        <ul class="nav">
-                            <li>Главная</li>
-                            <li>Обо мне</li>
-                            <li>Навыки</li>
-                            <li>Портфолио</li>
-                            <li>Контакты</li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
             <!-- Контентная часть первого экрана-->
-            <div class="first-content">
+            <div class="first-content" id="firstScreen">
                 <!-- Текстовая часть первого экрана -->
-                <div class="main-wrapper flex">
+                <div class="main-wrapper flex modile__flex">
                     <div class="text-content">
                         <h1>Дмитрий Волченко</h1>
                         <p>Верстка сайтов любой сложности</p>
@@ -160,7 +248,7 @@ h2{
         </div>
         <main>
             <!-- Блок обо мне -->
-            <section class="about-me">
+            <section class="about-me" id="aboutMe">
                 <div class="main-wrapper">
                     <h2>Я создаю прекрасные адаптивные и современные сайты</h2>
                 <p>В настоящее время интернет занял внушительную часть нашей жизни, а значит сайты должны быть созданы не только визуально привлекательными,
@@ -200,7 +288,7 @@ h2{
                 </blockquote>
             </section>
             <!-- Навыки -->
-            <section class="skills">
+            <section class="skills" id="skill">
                 <div class="main-wrapper">
                     <h2>Мои навыки</h2>
                     <div class="panels">
@@ -219,7 +307,7 @@ h2{
                 </div>
             </section>
             <!-- Мои работы -->
-            <section class="works">
+            <section class="works" id="work">
                 <div class="main-wrapper">
                     <h2>Мои работы
                     </h2>
@@ -236,7 +324,7 @@ h2{
                 </div>
             </section>
             <!-- Контакты -->
-            <section class="contacts">
+            <section class="contacts" id="contact">
                 <h2>Оставить заявку</h2>
                 <div class="main-wrapper">
                     <form action="" autocomplete="off">
@@ -263,5 +351,6 @@ h2{
                 <p class="email">Sverxsro4nik@gmail.com</p>
             </div>
         </footer>
+        <script src="./dist/index.js"></script>
 </body>
 </html>

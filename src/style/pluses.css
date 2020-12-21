@@ -23,15 +23,18 @@
     position: relative;
     flex: 1 1 300px;
     min-width: 300px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px 100px max-content;
+    gap: 10px;
 }
 /* Добавление иконок в подпункты  общие требования*/
 .adaptive::before, .semantic::before, .fast::before{
     content: '';
-    position: absolute;
-    top: 85px;
-    left: 120px;
-    width: 115px;
-    height: 100px;
+    width: 110px;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: center;
 }
 /* Иконки в подпунктах, отдельно для каждого пункта */
 .adaptive::before{
@@ -46,9 +49,14 @@
 /* Уникальные стили для элементов которые используются в блоке плюсов */
 .element h3 {
     text-align: center;
+    grid-column: 1/-1;
+            align-self: center;
+            justify-self: center;
 }
 .element p {
     margin-top: 156px;
     background-color: #C4C4C4;
     padding: 25px 10px;
+    grid-column: 1/-1; 
+            grid-row: 2 /-1;
 }

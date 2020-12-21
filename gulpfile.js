@@ -1,6 +1,7 @@
 const { task } = require('gulp');
 var gulp = require('gulp');
 var concatCss = require('gulp-concat-css');
+const concatJS = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const gulpClean = require('gulp-clean');
 const gulpFont= require('gulp-fonter');
@@ -9,14 +10,16 @@ const imageminPngquant = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
 
 
-const cssFiles = ['./src/style/font.css','./src/style/pluses.css',
+const cssFiles = ['./src/style/font.css',
+                    './src/style/pluses.css',
                     './src/style/citate.css', 
                     './src/style/skills.css',
-                './src/style/works.css',
-            './src/style/form.css',
-        './src/style/footer.css'];
+                    './src/style/works.css',
+                    './src/style/form.css',
+                    './src/style/footer.css',
+                    './src/style/media.css'];
 
-const jsFiles = [];
+const jsFiles = ['./src/js/viewport.js'];
 
 // Стили
 function styles() {
@@ -24,6 +27,14 @@ function styles() {
       .pipe(concatCss("style.css"))
       .pipe(gulp.dest('dist/'));
 };
+
+// JS
+function scripts(){
+    return gulp.src(jsFiles)
+    .pipe(concatJS("index.js"))
+    .pipe(gulp.dest('./dist/'));
+}
+
 // Обработка шрифтов
 function fonts(){
     return gulp
@@ -67,4 +78,5 @@ function cleanDist() {
 }
 gulp.task('static', gulp.parallel(fonts, gulp.series(images, imagesIcon)));
 gulp.task('clean', cleanDist);
+gulp.task('script', scripts);
 gulp.task('styles', styles);
