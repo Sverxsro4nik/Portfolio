@@ -29,3 +29,21 @@ function viewport(){
         }
     }
 }
+const inputHeader = document.querySelector('.toggle');
+
+// inputHeader.addEventListener('change', () => {
+//     console.log(inputHeader.checked);
+//     if(inputHeader.checked){
+//         document.querySelector('.nav').style.backgroundColor= '#FFF';
+//     }else{
+//         document.querySelector('.nav').style.backgroundColor= '';
+//     }
+// })
+// inputHeader.onchange = () => {
+//     console.log(inputHeader.checked);
+//     if(inputHeader.checked){
+//         document.querySelector('.nav').style.backgroundColor= '#FFF';
+//     }else{
+//         document.querySelector('.nav').style.backgroundColor= '';
+//     }
+// }
