@@ -33,7 +33,7 @@
   background-color: var(--main-color);
   position: relative;
   flex: 1 1 300px;
-  min-width: 300px;
+  min-width: 200px;
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 50px 100px max-content;
@@ -156,6 +156,7 @@
 .left-panel,
 .right-panel {
   width: 35%;
+  min-width: 200px;
 }
 
 .left-panel h3,
@@ -336,7 +337,7 @@ form .main__button {
 }
 /* Медиа запросы для мобильных устройств */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .text-content {
     margin-left: 0;
   }

@@ -14,6 +14,7 @@
 }
 .left-panel, .right-panel{
     width: 35%;
+    min-width: 200px;
 }
 .left-panel h3, .right-panel h3{
     text-align: center;
