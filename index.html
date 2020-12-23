@@ -63,6 +63,9 @@ h2{
     margin-left: 50px;
 }
 /* Напигационная панель */
+.toggle{
+    display: none;
+}
 .nav{
     list-style: none;
     display: flex;
@@ -83,28 +86,6 @@ h2{
     cursor: pointer;
     color: #FE9E0E;
     border-bottom: 1px solid #FE9E0E;
-}
-/* Выпадашка */
-.line{
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: white;
-}
-.line:not(:first-child){
-    margin-top: 10px;
-}
-.burger{
-    display: block;
-    margin-top: -5px;
-    position: absolute;
-    right: 0px;
-}
-.toggle{
-    display: none;
-}
-.burger label{
-    display: none;
 }
 /* Стили для первого экрана */
 .first-content, .citate{
@@ -152,6 +133,25 @@ h2{
     padding-bottom: 70px;
 }
 @media  (max-width:767px){
+    /* Выпадашка */
+.line{
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+}
+.line:not(:first-child){
+    margin-top: 10px;
+}
+.burger{
+    display: block;
+    margin-top: -5px;
+    position: absolute;
+    right: 0px;
+}
+.burger label{
+    display: none;
+}
     .logo{
         margin-left: 0;
     }
