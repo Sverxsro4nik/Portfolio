@@ -29,21 +29,39 @@ function viewport(){
         }
     }
 }
-const inputHeader = document.querySelector('.toggle');
-
-// inputHeader.addEventListener('change', () => {
-//     console.log(inputHeader.checked);
-//     if(inputHeader.checked){
-//         document.querySelector('.nav').style.backgroundColor= '#FFF';
-//     }else{
-//         document.querySelector('.nav').style.backgroundColor= '';
-//     }
-// })
-// inputHeader.onchange = () => {
-//     console.log(inputHeader.checked);
-//     if(inputHeader.checked){
-//         document.querySelector('.nav').style.backgroundColor= '#FFF';
-//     }else{
-//         document.querySelector('.nav').style.backgroundColor= '';
-//     }
-// }
+const workLinks = document.querySelectorAll('.work li');
+const gallery = document.querySelector('.galerry');
+const images = {
+    all: ['./dist/images/image1.png', './dist/images/magazine-3ver.png', './dist/images/Portfolio.png'],
+    programm: ['./dist/images/image1.png', './dist/images/Portfolio.png'],
+    design: ['./dist/images/image1.png', './dist/images/magazine-3ver.png', './dist/images/Portfolio.png']
+}
+function activeLink(array, className){
+    createImages(images, 'all');
+    let activeLink;
+    for(let i = 0; i < array.length; i++){
+        array[i].onclick = () => {
+            for(let item of array){
+                if(item.classList.contains(className)){
+                    activeLink = item;
+                    gallery.innerHTML = '';
+                }
+            }
+            activeLink.classList.remove(className);
+            array[i].classList.add(className);
+            createImages(images, array[i].getAttribute('data-work'));
+        }
+    }
+}
+function createImages(object, value) {
+    for(let item in object){
+        if(value === item){
+            for(let key of object[item]){
+                let img = document.createElement('img');
+                img.src = key;
+                gallery.append(img);
+            }
+        }
+    }
+}
+activeLink(workLinks, 'active');
