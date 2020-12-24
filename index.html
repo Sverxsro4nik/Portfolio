@@ -63,6 +63,9 @@ h2{
     margin-left: 50px;
 }
 /* Напигационная панель */
+.toggle{
+    display: none;
+}
 .nav{
     list-style: none;
     display: flex;
@@ -83,28 +86,6 @@ h2{
     cursor: pointer;
     color: #FE9E0E;
     border-bottom: 1px solid #FE9E0E;
-}
-/* Выпадашка */
-.line{
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: white;
-}
-.line:not(:first-child){
-    margin-top: 10px;
-}
-.burger{
-    display: block;
-    margin-top: -5px;
-    position: absolute;
-    right: 0px;
-}
-.toggle{
-    display: none;
-}
-.burger label{
-    display: none;
 }
 /* Стили для первого экрана */
 .first-content, .citate{
@@ -130,6 +111,9 @@ h2{
     font-weight: normal;
 }
 /* Стили для кнопки на первом экране */
+a.main__button{
+    text-decoration: none;
+}
 .main__button {
     background-color: rgba(116, 12, 12, 1);
     padding: 16px 47px;
@@ -152,6 +136,25 @@ h2{
     padding-bottom: 70px;
 }
 @media  (max-width:767px){
+    /* Выпадашка */
+.line{
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+}
+.line:not(:first-child){
+    margin-top: 10px;
+}
+.burger{
+    display: block;
+    margin-top: -5px;
+    position: absolute;
+    right: 0px;
+}
+.burger label{
+    display: none;
+}
     .logo{
         margin-left: 0;
     }
@@ -201,6 +204,9 @@ label{
 }
 .toggle:checked + label + .nav .links{
     color: black;
+}
+.toggle:checked + label + .nav .links:hover{
+    color: #FE9E0E;
 }
 .toggle:checked + label + .nav li:not(:first-child){
     margin-left: 0;
@@ -279,7 +285,7 @@ label{
                     <div class="text-content">
                         <h1>Дмитрий Волченко</h1>
                         <p>Верстка сайтов любой сложности</p>
-                        <button class="main__button">Связаться со мной</button>
+                        <a href="#mainForm" class="main__button">Связаться со мной</a>
                     </div>
                     <!-- Изображение -->
                     <img src="./dist/images/phot.png" width="239px" height="339px" alt="Дмитрий Волченко" class="main-photo">
@@ -334,14 +340,14 @@ label{
                     <div class="panels">
                         <div class="left-panel">
                             <h3>Разработка сайтов</h3>
-                            <p><span class="text-part">HTML5</span> <progress id="file" max="100" value="70" class="value-part"> </progress> </p>
-                            <p><span class="text-part">CSS3</span> <progress id="file" max="100" value="70"class="value-part"> </progress> </p>
-                            <p><span class="text-part">JavaScript</span> <progress id="file" max="100" value="70" class="value-part"> </progress> </p>
+                            <p><span class="text-part">HTML5</span> <progress id="file" max="100" value="81" class="value-part"> </progress> </p>
+                            <p><span class="text-part">CSS3</span> <progress id="file" max="100" value="72"class="value-part"> </progress> </p>
+                            <p><span class="text-part">JavaScript</span> <progress id="file" max="100" value="63" class="value-part"> </progress> </p>
                         </div>
                         <div class="right-panel">
                             <h3>Дизайн</h3>
                             <p><span class="text-part">Photoshop</span> <progress id="file" max="100" value="70" class="value-part"> </progress> </p>
-                            <p><span class="text-part">Figma</span> <progress id="file" max="100" value="70" class="value-part"> </progress> </p>
+                            <p><span class="text-part">Figma</span> <progress id="file" max="100" value="53" class="value-part"> </progress> </p>
                         </div>
                     </div>
                 </div>
@@ -367,7 +373,7 @@ label{
             <section class="contacts" id="contact">
                 <h2>Оставить заявку</h2>
                 <div class="main-wrapper">
-                    <form action="" autocomplete="off">
+                    <form action="" autocomplete="off" id="mainForm">
                         <input type="text" placeholder="Укажите ваше имя и фамилию" required>
                         <input type="text" placeholder="Укажите ваш e-mail" autocomplete="off" required>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
