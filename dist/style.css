@@ -5,7 +5,12 @@
 /* Блок с достоинствами */
 
 .pluses {
-  background-color: #AF9F9F;
+  background-color: rgb(23%, 21%, 21%, .5);
+  background-image: url("images/bg/pakata-goh-EJMTKCZ00I0-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-blend-mode: multiply;
   padding-top: 90px;
   padding-bottom: 75px;
 }
@@ -22,7 +27,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin: 60px 0;
   gap: 30px;
 }
 
@@ -84,14 +89,9 @@
 }
 /* Блок с цитатой */
 
-.citate {
-  padding: 70px 0;
-  background-image: url("images/bg_small.webp");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: rgb(23%, 21%, 21%, .5);
-  background-blend-mode: multiply;
+div.citate {
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 100px;
 }
 
 /* Стилизация цитаты */
@@ -228,6 +228,10 @@ progress::-webkit-progress-bar {
 .active {
   color: #FE9E0E;
   border-bottom: 1px solid #FE9E0E;
+}
+
+.active:hover {
+  cursor: pointer;
 }
 
 /* Стили для галереи */

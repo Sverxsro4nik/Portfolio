@@ -17,7 +17,7 @@
 }
 /* подключение шрифта в документ */
 body{
-    font-family: PTSansCaption;
+    font-family: 'PTSansCaption' sans-serif ;
 }
 /* удаление панели скролла */
 body::-webkit-scrollbar{
@@ -44,11 +44,13 @@ h2{
 }
 /* Стили для шапки сайта */
 .first-screen{
-    background-image: url('./dist/images/bg.webp');
+    /* background-image: url('./dist/images/bg.webp'); */
+    background-image: url('./dist/images/bg/domenico-loia-hGV2TfOh0ns-unsplash.webp');
     background-origin: border-box;
     background-repeat: no-repeat;
+    background-position:  center center;
     background-size: cover;
-    padding-top: 107px;
+    /* padding-top: 207px; */
 }
 /* Шапка сайта */
 .header{
@@ -92,6 +94,9 @@ h2{
     background-color: rgb(23%, 21%, 21%, .5);
     color: var(--main-color);
 }
+.first-content{
+    padding-top: 200px;
+}
 /* Текстовая часть первого экрана */
 .text-content{
     display: flex;
@@ -101,7 +106,7 @@ h2{
 .text-content h1 {
     font-size: 2.5rem;
     font-weight: normal;
-    margin-top: 70px;
+    padding-top: 70px;
 }
 /* Стили для параграфа первого экрана */
 .text-content p {
@@ -323,15 +328,16 @@ label{
                             Eum, nam quibusdam! Consequuntur officiis expedita sint sapiente, 
                             ratione alias minus. Laborum, excepturi officia!</p></li>
                 </ul>
-                </div>
-            </section>
+                
             <!-- Секция с цитатой -->
-            <section class="citate">
+            <div class="citate">
                 <blockquote class="main-wrapper lao">
                     Кто, предпринимая дело, спешит наскоро достичь результата, тот ничего не сделает. 
 Кто осторожно оканчивает свое дело, как начал, тот не потерпит неудачи.
 <p>Лао-цзы</p>
                 </blockquote>
+            </div>
+                </div>
             </section>
             <!-- Навыки -->
             <section class="skills" id="skill">
@@ -363,9 +369,6 @@ label{
                         <li data-work="design">Дизайн</li>
                     </ul>
                     <div class="galerry">
-                        <!-- <img src="./dist/images/image1.png" alt="1">
-                        <img src="./dist/images/magazine-3ver.png" alt="2">
-                        <img src="./dist/images/Portfolio.png" alt="3"> -->
                 </div>
                 </div>
             </section>
