@@ -20,7 +20,12 @@
 .active{
     color: #FE9E0E;
     border-bottom: 1px solid #FE9E0E;
+    
 }
+.active:hover{
+    cursor: pointer;
+}
+
 /* Стили для галереи */
 .galerry{
     display: flex;

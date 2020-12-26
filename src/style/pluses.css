@@ -1,6 +1,11 @@
 /* Блок с достоинствами */
 .pluses{
-    background-color: #AF9F9F;
+    background-color: rgb(23%, 21%, 21%, .5);
+    background-image: url('images/bg/pakata-goh-EJMTKCZ00I0-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-blend-mode: multiply;
     padding-top: 90px;
     padding-bottom: 75px;
 }
@@ -13,7 +18,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin: 60px 0;
     gap: 30px;
 }
 /* Стили для подпунктов в плюсах */
