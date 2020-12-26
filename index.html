@@ -45,7 +45,8 @@ h2{
 /* Стили для шапки сайта */
 .first-screen{
     /* background-image: url('./dist/images/bg.webp'); */
-    background-image: url('./dist/images/bg/domenico-loia-hGV2TfOh0ns-unsplash.webp');
+    background-image: url('./dist/images/bg/main__bg.jpg');
+    background-image: url('./dist/images/bg/main__bg.webp');
     background-origin: border-box;
     background-repeat: no-repeat;
     background-position:  center center;
@@ -140,7 +141,17 @@ a.main__button{
     padding-top: 90px;
     padding-bottom: 70px;
 }
+@media screen and (max-width: 959px){
+    .first-screen{
+        background-image: url('./dist/images/bg/tablet__bg.jpg');
+        background-image: url('./dist/images/bg/tablet__bg.webp');
+    }
+}
 @media  (max-width:767px){
+    .first-screen{
+        background-image: url('./dist/images/bg/small__bg.jpg');
+        background-image: url('./dist/images/bg/small__bg.webp');
+    }
     /* Выпадашка */
 .line{
     display: block;

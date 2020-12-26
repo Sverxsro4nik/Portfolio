@@ -59,6 +59,7 @@ function createImages(object, value) {
             for(let key of object[item]){
                 let img = document.createElement('img');
                 img.src = key;
+                img.alt = 'Работа';
                 gallery.append(img);
             }
         }

@@ -3,6 +3,11 @@
     .text-content{
         margin-left: 0;
     }
+    .pluses{
+        background-image: url('images/bg/plusess__small.jpg');
+        background-image: url('images/bg/plusess__small.webp');
+    }
+    
     .about-me, .pluses, .citate, .skills, .works, .contacts{
         padding: 30px 0;
     }
@@ -42,6 +47,10 @@
 }
 /*Медиа запросы для планшетов*/
 @media screen and (max-width: 959px){
+    .pluses{
+        background-image: url('images/bg/plusess__tablet.jpg');
+        background-image: url('images/bg/plusess__tablet.webp');
+    }
     .text-content{
         margin-left: 0;
     }

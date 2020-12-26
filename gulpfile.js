@@ -74,12 +74,24 @@ function imagesIcon() {
         }))
         .pipe(gulp.dest('./dist/images/icon'))
 }
+function imagesBg() {
+    return gulp.src('./src/image/bg/*')
+		.pipe(imagemin({
+            destination: './dist/images/bg',
+            plugins: [
+                imageminSvgo(),
+                imageminJpegtran(),
+                imageminPngquant(),
+            ]
+        }))
+        .pipe(gulp.dest('./dist/images/bg'))
+}
 // Очистка папки dist
 function cleanDist() {
     return gulp.src('./dist/style.css', {read: false})
     .pipe();
 }
-gulp.task('static', gulp.parallel(fonts, gulp.series(images, imagesIcon)));
+gulp.task('static', gulp.parallel(fonts, gulp.series(images, gulp.parallel(imagesIcon, imagesBg))));
 gulp.task('clean', cleanDist);
 gulp.task('script', scripts);
 gulp.task('styles', styles);
