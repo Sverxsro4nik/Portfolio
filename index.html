@@ -45,7 +45,8 @@ h2{
 /* Стили для шапки сайта */
 .first-screen{
     /* background-image: url('./dist/images/bg.webp'); */
-    background-image: url('./dist/images/bg/domenico-loia-hGV2TfOh0ns-unsplash.webp');
+    background-image: url('./dist/images/bg/main__bg.jpg');
+    background-image: url('./dist/images/bg/main__bg.webp');
     background-origin: border-box;
     background-repeat: no-repeat;
     background-position:  center center;
@@ -140,7 +141,20 @@ a.main__button{
     padding-top: 90px;
     padding-bottom: 70px;
 }
+@media screen and (max-width: 959px){   
+    .first-screen{
+        background-image: url('./dist/images/bg/tablet__bg.jpg');
+        background-image: url('./dist/images/bg/tablet__bg.webp');
+    }
+}
 @media  (max-width:767px){
+    .header .flex{
+        padding: 20px 0;
+    }
+    .first-screen{
+        background-image: url('./dist/images/bg/small__bg.jpg');
+        background-image: url('./dist/images/bg/small__bg.webp');
+    }
     /* Выпадашка */
 .line{
     display: block;
@@ -153,7 +167,7 @@ a.main__button{
 }
 .burger{
     display: block;
-    margin-top: -5px;
+    /* margin-top: 5px; */
     position: absolute;
     right: 0px;
 }
@@ -224,6 +238,9 @@ label{
     left: 22px;
     z-index: 2;
 }
+.text-content h1{
+    padding-top: 0px;
+}
 .toggle:checked + label .line:nth-child(2){
     opacity: 0;
 }
@@ -235,19 +252,10 @@ label{
     z-index: 2;
 }
 
-    p.email{
-        order: 1;
-        margin-top: 0;
-    }
-    div.footer-logo{
-        margin-top: 3px;
-    }
-    .footer-logo img{
-        width: 100px;
-    }
-    div.sochial{
+    
+    /* div.sochial{
         margin-left: 50px;
-    }
+    } */
 }
 
     </style>
@@ -392,12 +400,12 @@ label{
                     <img src="./dist/images/Sverxsro4nik.svg" alt="Sverxsro4nik">
                 </div>
                 <div class="sochial">
-                    <a href="#" class="vkontakte"></a>
-                    <a href="#" class="twiter"></a>
-                    <a href="#" class="instagram"></a>
-                    <a href="#" class="telegram"></a>
+                    <a href="https://vk.com/id406923731" class="vkontakte" target="_blank"></a>
+                    <a href="https://twitter.com/VolchenkoDmit" class="twiter" target="_blank"></a>
+                    <a href="https://www.instagram.com/dmitrii_volchenko/" class="instagram" target="_blank"></a>
+                    <a href="https://web.telegram.org/#/im" class="telegram" target="_blank"></a>
                 </div>
-                <p class="email">Sverxsro4nik@gmail.com</p>
+                <p class="email">dmitriyvolchenko86@gmail.com</p>
             </div>
         </footer>
         <script src="./dist/index.js"></script>

@@ -1,7 +1,8 @@
 /* Блок с достоинствами */
 .pluses{
     background-color: rgb(23%, 21%, 21%, .5);
-    background-image: url('images/bg/pakata-goh-EJMTKCZ00I0-unsplash.jpg');
+    background-image: url('images/bg/plusess__bg.jpg');
+    background-image: url('images/bg/plusess__bg.webp');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;

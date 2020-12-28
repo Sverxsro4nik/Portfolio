@@ -3,6 +3,11 @@
     .text-content{
         margin-left: 0;
     }
+    .pluses{
+        background-image: url('images/bg/plusess__small.jpg');
+        background-image: url('images/bg/plusess__small.webp');
+    }
+    
     .about-me, .pluses, .citate, .skills, .works, .contacts{
         padding: 30px 0;
     }
@@ -30,10 +35,19 @@
         justify-content: start;
         gap: 15px;
     }
+    p.email{
+        margin-top: 0;
+    }
+    div.footer-logo{
+        margin-top: 3px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
     .sochial{
-        margin-top: 5px;
-        margin-left: 80px;
-        order: 2;
+        margin-top: 0px;
+        margin-left: 30px;
+        /* order: 2; */
         justify-content: space-between;
     }
     .email{
@@ -42,6 +56,10 @@
 }
 /*Медиа запросы для планшетов*/
 @media screen and (max-width: 959px){
+    .pluses{
+        background-image: url('images/bg/plusess__tablet.jpg');
+        background-image: url('images/bg/plusess__tablet.webp');
+    }
     .text-content{
         margin-left: 0;
     }
