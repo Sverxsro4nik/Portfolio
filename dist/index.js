@@ -32,9 +32,9 @@ function viewport(){
 const workLinks = document.querySelectorAll('.work li');
 const gallery = document.querySelector('.galerry');
 const images = {
-    all: ['./dist/images/image1.png', './dist/images/magazine-3ver.png', './dist/images/Portfolio.png'],
-    programm: ['./dist/images/image1.png', './dist/images/Portfolio.png'],
-    design: ['./dist/images/image1.png', './dist/images/magazine-3ver.png', './dist/images/Portfolio.png']
+    all: ['./dist/images/first__work.jpg', './dist/images/second__work.jpg', './dist/images/third__work.jpg'],
+    programm: ['./dist/images/first__work.jpg', './dist/images/third__work.jpg'],
+    design: ['./dist/images/first__work.jpg', './dist/images/second__work.jpg', './dist/images/third__work.jpg']
 }
 function activeLink(array, className){
     createImages(images, 'all');
@@ -59,6 +59,9 @@ function createImages(object, value) {
             for(let key of object[item]){
                 let img = document.createElement('img');
                 img.src = key;
+                img.setAttribute('width', '360px');
+                img.setAttribute('height', '200px');
+                img.setAttribute('loading', 'lazy');
                 img.alt = 'Работа';
                 gallery.append(img);
             }
