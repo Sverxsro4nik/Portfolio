@@ -35,10 +35,19 @@
         justify-content: start;
         gap: 15px;
     }
+    p.email{
+        margin-top: 0;
+    }
+    div.footer-logo{
+        margin-top: 3px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
     .sochial{
-        margin-top: 5px;
-        margin-left: 80px;
-        order: 2;
+        margin-top: 0px;
+        margin-left: 30px;
+        /* order: 2; */
         justify-content: space-between;
     }
     .email{
