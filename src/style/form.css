@@ -14,13 +14,13 @@ form {
 legend{
     text-align: center;
 }
-input[type="text"], textarea{
+input[type="text"],input[type="email"], textarea{
     padding: 15px;
     border-radius: 5px;
     border: none;
     background-color: #c9a8a8;
 }
-input[type="text"]:focus, textarea:focus{
+input[type="text"]:focus,input[type="email"]:focus, textarea:focus{
     outline: none;
     border: 2px solid #CC4646;
     padding: 13px;
@@ -28,6 +28,9 @@ input[type="text"]:focus, textarea:focus{
 input[type="text"]::placeholder{
     color: #302424;
     opacity: 0.7;
+}
+form input._error{
+    box-shadow: 0 0 15px red;
 }
 form .main__button{
     width: 100%;
