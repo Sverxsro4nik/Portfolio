@@ -23,16 +23,25 @@
     background-repeat: no-repeat;
 }
 .vkontakte{
-    background-image: url('./images/icon/vkontakte.svg');
+    background-image: url('./images/icon/vk.svg');
     background-position: center center;
 }
-.twiter{
-    background-image: url('./images/icon/twitter.svg');
+.vkontakte:hover, .twiter:hover, .instagram:hover{
+    width: 20px;
+    height: 20px;
 }
-.telegram{
-    background-image: url('./images/icon/telegram.svg');
+.vkontakte:hover{
+    background-image: url('./images/icon/vk__hover.svg');
+}
+.twiter{
+    background-image: url('./images/icon/twiter.svg');
+}
+.twiter:hover{
+    background-image: url('./images/icon/twiter__hover.svg');
 }
 .instagram{
     background-image: url('./images/icon/instagram.svg');
-    fill: white;
+}
+.instagram:hover{
+    background-image: url('./images/icon/instagram__hover.svg');
 }
