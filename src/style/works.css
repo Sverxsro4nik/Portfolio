@@ -35,3 +35,29 @@
 .galerry img{
     align-self: start;
 }
+
+figure{
+    position: relative;
+}
+.none{
+    display: none;
+}
+.figcaption{
+    position: absolute;
+    display: block;
+    top: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(34, 27, 18, 0.7);
+    width: 360px;
+    height: 200px;
+}
+.figcaption a{
+    color: white;
+    text-decoration: none;
+}
+.figcaption a:hover{
+    color: #FE9E0E;
+}
