@@ -57,67 +57,43 @@ function createImages(object, value) {
     for(let item in object){
         if(value === item){
             for(let key of object[item]){
+                let figure = document.createElement('figure');
+                let figcaption = document.createElement('figcaption');
+                let link = document.createElement('a');
                 let img = document.createElement('img');
                 img.src = key;
                 img.setAttribute('width', '360px');
                 img.setAttribute('height', '200px');
                 img.setAttribute('loading', 'lazy');
                 img.alt = 'Работа';
-                gallery.append(img);
+                link.href = '#';
+                link.textContent = 'Посмотреть подробнее'
+                figure.append(img);
+                figcaption.append(link);
+                figcaption.classList.add('none');
+                figure.append(figcaption);
+                gallery.append(figure);
             }
         }
     }
 }
 activeLink(workLinks, 'active');
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', formSend);
 
-    async function formSend(e){
-        e.preventDefault();
-        
-
-        let error = formValidate(form);
-        if(error === 0) {
-
-        }else{
-            alert('Неправильно заполнена форма');
-        }
-    }
-
-    function formValidate(form){
-        let error = 0;
-        let formReq = document.querySelectorAll('._req');
-
-        for(let index = 0; index < formReq.length; index++){
-            const input = formReq[index];
-            formRemoveError(input);
-            if(input.classList.contains('_email')) {
-                if(emailTest(input)){
-                    formAddError(input);
-                    error++;
-                }
-            }else{
-                if(input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
+function showFigcaption() {
+    const figure = document.querySelectorAll('figure');
+    const figcaption = document.querySelectorAll('figcaption');
+    for(let item = 0; item < figure.length; item++){
+        figure[item].addEventListener('mouseenter', (event) => {
+            if(event.target === figure[item]) {
+                figcaption[item].classList.add('figcaption');
             }
-
-        }
+        })
+        figure[item].addEventListener('mouseleave', (event) => {
+            if(event.target === figure[item]) {
+                figcaption[item].classList.remove('figcaption');
+            }
+        })
     }
 
-    function formAddError(input){
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
-    }
-
-    function formRemoveError(input){
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    }
-
-    function emailTest(input){
-        return ! /^\w+([\.-]?\w+)*@\w+([\.-]?\w)*(\.\w{2,8})+$/.test(input.value);
-    }
-})
+}
+showFigcaption();
