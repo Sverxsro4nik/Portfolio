@@ -21,7 +21,7 @@ const cssFiles = ['./src/style/font.css',
                     './src/style/media.css'];
 
 const jsFiles = ['./src/js/viewport.js',
-                    './src/js/works.js', './src/js/email.js'];
+                    './src/js/works.js', ];
 
 // Стили
 function styles() {
