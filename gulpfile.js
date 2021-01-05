@@ -11,7 +11,7 @@ const imageminPngquant = require('imagemin-optipng');
 const imageminSvgo = require('imagemin-svgo');
 
 
-const cssFiles = ['./src/style/font.css',
+const cssFiles = ['./src/style/first__page.css', './src/style/font.css',
                     './src/style/pluses.css',
                     './src/style/citate.css', 
                     './src/style/skills.css',
