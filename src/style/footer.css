@@ -9,13 +9,13 @@
 .footer-logo{
     margin-top: 5px;
 }
-.sochial{
+.social{
     position: relative;
     display: flex;
     gap: 30px;
     margin-left: 50px;
 }
-.sochial a{
+.social a{
     display: inline-block;
     width: 20px;
     height: 20px;
