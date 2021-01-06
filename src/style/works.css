@@ -32,8 +32,9 @@
     gap: 20px;
     flex-wrap: wrap;
 }
-.galerry img{
+figure > img{
     align-self: start;
+    min-width: 270px;
 }
 
 figure{
@@ -51,6 +52,7 @@ figure{
     justify-content: center;
     align-items: center;
     background-color: rgba(34, 27, 18, 0.7);
+    min-width: 270px;
     width: 360px;
     height: 200px;
 }

@@ -117,17 +117,21 @@ label{
     .main-photo{
         margin-right: 0;
     }
-    .modile__flex {
+    .mobile__flex {
         justify-content: center;
     }
     .left-panel, .right-panel{
-        width: 100vw;
+        width: 90vw;
     }
     .right-panel{
         margin-top: 20px;
     }
     .galerry{
         justify-content: center;
+    }
+    .galerry img{
+        max-width: 270px;
+        height: auto;
     }
     .work{
         justify-content: start;
